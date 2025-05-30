@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="stile_web-portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="fixed-header">
+      <img id="logo-volto" src="img/volto_bianco.png" alt="Logo" />
+      <img id="firma" src="img/firma-fake bianca.png" alt="Firma" />
+      <!--
+      <nav>
+        <a href="index.html" class="logo">Samuele Agrusa</a>
+        <ul>
+          <li><a href="#about">Chi sono</a></li>
+          <li><a href="#contact">Contatti</a></li>
+        </ul>
+      </nav>
+    -->
+    </header>
+
+    <main>
+      <section class="landing">
+        <div class="parallax-container">
+          <img src="img/In Hand Product Box Mockup.png" class="layer layer1" data-speed="1">
+          <img src="img/Qual è il limite effetti soggetto.png" class="layer layer2" data-speed="16">
+          <img src="img/paper_cup_white pink daily yolk.png" class="layer layer3" data-speed="4">
+        </div>
+        
+        <h1 aria-label="Ciao, mi chiamo Samuele e sono">
+          Ciao, mi chiamo Samuele.<br>Mi occupo di&nbsp;<span class="mobile-br"><br></span><span class="typewriter nocaret"></span>
+        </h1>
+      </section>
+
+      <section class="bio">
+        <h2>Chi sono?</h2>
+        <p>
+          Il mio pensiero di progettazione è basato sul concetto di osservazione e rielaborazione, prestando particolare attenzione alla sintesi. <br>
+          Mi appassionano la grafica sovietica, il fitness e l'esplorazione spaziale.
+        </p>
+      </section>
+      
+      <!--test progetti-->
+      
+      <section style="padding-left: 3vw; padding-top: 10vh;">
+        <h2>Ecco alcuni dei miei progetti</h2>
+        <div class="progetti">
+          <a href="#" class="progetto">
+            <div class="progetto-contenuto">
+              <img src="img/In Hand Product Box Mockup.png" alt="Screenshot progetto">
+              <h3>Mirakuru</h3>
+            </div>  
+          </a>
+
+          <a href="#" class="progetto">
+            <div class="progetto-contenuto">
+              <img src="img/Lumera.png" alt="Screenshot progetto">
+              <h3>Lumerà</h3>
+            </div> 
+          </a>
+
+          <a href="#" class="progetto">
+            <div class="progetto-contenuto">
+              <img src="img/Ikon.png" alt="Screenshot progetto">
+              <h3>Ikon</h3>
+            </div>  
+          </a>
+
+          <a href="#" class="progetto">
+            <div class="progetto-contenuto">
+              <img src="img/paper_cup_white pink daily yolk.png" alt="Screenshot progetto">
+              <h3>Daily Yolk</h3>
+            </div>  
+          </a>
+
+        </div>
+      </section>
+
+      
+      <!--fine test progetti-->
+    </main>
+
+    
+
+
+    <footer>
+        <p>lavoriamo insieme?</p>
+        <p>Copyright © 2024 - Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("mousemove", function(e) {
+        const layers = document.querySelectorAll(".layer");
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+
+        layers.forEach(layer => {
+          const speed = layer.dataset.speed;
+          const moveX = x * speed * 20;
+          const moveY = y * speed * 20;
+          layer.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+      });
+    </script>
+
+      <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const logo = document.getElementById("logo-volto");
+      if (!logo) return;
+
+      const logoImages = [
+        "img/volto_bianco.png",
+        "img/volto_bianco_Tavola disegno 1.png",
+        "img/volto_bianco-02.png",
+        "img/volto-bianco.png"
+      ];
+
+      logoImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+
+      let current = 0;
+
+      setInterval(() => {
+        current = (current + 1) % logoImages.length;
+        logo.src = logoImages[current];
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

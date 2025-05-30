@@ -1,0 +1,396 @@
+body {
+    margin: 0;
+    font-family: archivo;
+    background-color: #005ec2;
+    color: #F8EBEE;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+        margin-top: -20vh;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+p   {
+    font-size: 2rem;
+    line-height: 130%;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
+header  {
+    max-width: 70vw;
+    margin: auto;
+}
+
+.fixed-header {
+    max-width: 15vw;
+    margin: auto;
+    position: fixed;
+    top: 3vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+}
+
+.fixed-header img {
+    display: block;
+    max-width: 10vw;
+    margin: 0px 0;
+}
+
+#firma {
+    display: block;
+    max-width: 30vw;
+    margin-top: 10px;
+}
+
+header img {
+    width: 33vw;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+    max-width: 12vw;
+    }
+
+    .fixed-header img {
+    display: block;
+    max-width: 12vw;
+    margin: 0px 0;
+    }
+    
+    header img {
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+    }
+
+    #firma {
+    display: block;
+    max-width: 50vw;
+    margin-top: 10px;
+}
+}
+
+.logo {
+    display: block;
+    padding: 8px;
+    color: #ffffff;
+    transition: font-size 0.8s ease;
+    text-decoration: none;
+}
+
+main {
+    max-width: 70vw;
+    margin: auto;
+    position: relative;
+}
+
+.parallax-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    width: 300px;
+    transition: transform 0.1s ease;
+    pointer-events: none;
+}
+
+.layer1 {
+    top: 10%;
+    left: 40%;
+    max-width: 8vw;
+} 
+.layer2 { 
+    top: 10%;
+    left: 80%;
+    max-width: 20vw;
+} 
+.layer3 {
+    top: 50%;
+    left: 2%;
+    max-width: 15vw;
+}
+
+@media (max-width: 768px) {
+    .layer1 {
+        top: 20%;
+        left: 40%;
+        max-width: 15vw;
+    }.layer2 { 
+        top: 30%;
+        left: 80%;
+        max-width: 30vw;
+    }.layer3 {
+        top: 60%;
+        left: 2%;
+        max-width: 25vw;
+    }
+}
+
+
+.landing {
+    min-height: 70vh;
+    height: 70vh;
+    max-height: 70vh;
+    padding: 0vh 0vw 10vh 0vw;
+    background-color: #ffffff00;
+    position: relative;
+    width: 100vw;
+    margin-left: -15vw;
+}
+
+@media (max-width: 768px) {
+    .landing {
+        padding: 0vh;
+    }
+}
+
+.landing h1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin: 10vh 0vw 0vw 8vw;
+    font-weight: 700;
+    font-kerning: normal;
+    letter-spacing: -.5px;
+    line-height: 130%;
+    font-size: 5rem;
+    padding: 10vw;
+    color: #ffffff
+}
+
+.mobile-br {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-br {
+    display: inline;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .landing h1 {
+        font-size: 2rem;
+        position: inherit;
+        top: 25vh;
+        left: 0vw
+    }
+}
+
+@keyframes typing {
+0%   { content: "visual identity"; }
+    25%   { content: "visual identity"; }
+    50%  { content: "logo design"; }
+    75%  { content: "branding"; }
+    100%  { content: "progettazione grafica"; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 8s infinite;
+        background-color: #ffffff; /*0080ff*/
+        color: #001a34;
+        font-size:100%;
+        font-weight: 700;
+        /*box-shadow: 0 0 20px #f8ebee1d;*/
+        padding: 10px 20px;
+        border-radius: 0vw;
+}
+
+@media (prefers-reduced-motion) {
+    .typewriter::after {
+        animation: none;
+    }
+  
+    @keyframes sequencePopup {
+        0%, 100% { content: "progettista grafico"; } 
+    }
+
+    .typewriter::before {
+        content: "progettista grafico";
+        animation: sequencePopup 12s linear infinite;
+    }
+}
+
+@media (max-width: 768px) {
+    .typewriter::before {
+        padding: 5px;
+    }
+}
+
+.bio {
+    padding-left: 3vw;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+        position: inherit;
+        top: 25vh;
+        left: 5vw;
+        padding-top: 0vh;
+    }
+}
+
+.progetti {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-top: 5vh;
+}
+
+.progetto {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.progetto-contenuto {
+    position: relative;
+    height: 70vh;
+}
+
+.progetto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+}
+
+.progetto h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    color: #001a34 ;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.progetto:hover img {
+    opacity: 0.8;
+}
+
+.progetto:hover h3 {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .progetti {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .progetto-contenuto {
+        position: relative;
+        height: 50vh;
+    }
+
+    .progetto img {
+        width: 100%;
+        max-width: 70vw;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-fit: cover;
+}
+}
+
+footer {
+    max-width: 70vw;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! Grid System */
+.grid { margin: 0 auto; padding: 0 15px; max-width: 1250px; display: flex; flex-flow: row; flex-wrap: wrap;}
+.grid--center{justify-content: center;}
+.col{ flex: 1;}
+
+[class*='col-'] { position: relative;padding: 0 15px;}
+.grid .grid [class*='col-'] {padding: 0px;}
+
+.col-20{ width: 20%; }
+.col-25{ width: 25%; }
+.col-30{ width: 30%; }
+.col-33{ width: 33.33%; }
+.col-50{ width: 50%; }
+.col-70{ width: 70%; }
+.col-80{ width: 80%; }
+.col-100{ width: 100%; }
+
+@media (max-width: 991px) {
+    .tab-20 { width: 20%; }
+    .tab-25 { width: 25%; }
+    .tab-33 { width: 33.33%; }
+    .tab-50 { width: 50%; }
+    .tab-100 { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    [class*='col-'] { width: 100%;}
+    .sma-20 { width: 20%; }
+    .sma-25 { width: 25%; }
+    .sma-33 { width: 33.33%; }
+    .sma-50 { width: 50%; }
+    .sma-100 { width: 100%; }
+}
