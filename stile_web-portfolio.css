@@ -313,6 +313,8 @@ main {
     color: #001a34 ;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-align: center;
+    line-height: 100%;
 }
 
 .progetto:hover img {
@@ -348,6 +350,38 @@ main {
 footer {
     max-width: 70vw;
     margin: auto;
+    padding-left: 5vw;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+}
+
+footer h1 {
+    font-size: 5.7vw;
+    font-weight: 900;
+    margin-bottom: 0vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+    opacity: 1;
+    color: #001a34;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.contatti {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contatti p:last-child {
+    text-align: end;
 }
 
 
