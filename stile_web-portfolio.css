@@ -270,9 +270,15 @@ main {
 
 .bio {
     padding-left: 3vw;
+    margin-top: 20vh;
 }
 
 @media (max-width: 768px) {
+    .bio {
+    padding-left: 3vw;
+    margin-top: 20vh;
+    }
+
     h2 {
         font-size: 2rem;
         position: inherit;
