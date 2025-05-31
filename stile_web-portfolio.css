@@ -64,6 +64,14 @@ header  {
     margin: 0px 0;
 }
 
+@media (max-width: 768px) {
+    .fixed-header img {
+    display: block;
+    max-width: 15vw;
+    margin: 0px 0;
+    }
+}
+
 #firma {
     display: block;
     max-width: 30vw;
@@ -83,7 +91,7 @@ header img {
 
     .fixed-header img {
     display: block;
-    max-width: 12vw;
+    max-width: 18vw;
     margin: 0px 0;
     }
     
@@ -364,13 +372,14 @@ footer h1 {
 footer a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+        transition: all 0.2s ease-in-out;
 }
 
 footer a:hover {
     opacity: 1;
     color: #001a34;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     text-align: center;
     text-decoration: underline;
 }
@@ -378,11 +387,32 @@ footer a:hover {
 .contatti {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 16vw;
 }
 
-.contatti p:last-child {
-    text-align: end;
+footer p {
+    font-size: 3vw;
+    line-height: 100%;
 }
+
+@media (max-width: 768px) {
+    .contatti {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
+
+    footer p {
+    font-size: 1rem;
+    line-height: 100%;
+    }
+
+    .contatti p:last-child {
+    text-align: start;
+    }
+}
+
 
 
 
